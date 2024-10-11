@@ -38,6 +38,8 @@ const App: React.FC = () => {
         if (error instanceof Error) {
           setError(error);
         }
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
