@@ -11,7 +11,7 @@ import styles from "./App.module.css";
 
 const App: React.FC = () => {
   const [images, setImages] = useState<Image[]>([]);
-  const [query, setQuery] = useState<string | number>("");
+  const [query, setQuery] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
