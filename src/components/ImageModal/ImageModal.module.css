@@ -1,0 +1,40 @@
+.modal {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрування модального вікна */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1100; /* Задаємо ще більший z-index, щоб бути поверх overlay */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Темний напівпрозорий фон */
+  z-index: 1000; /* Задаємо високий z-index, щоб перекрити інший контент */
+}
+
+.content {
+}
+
+.image {
+}
+
+.name {
+}
+
+.closeButton {
+  background-color: #cbb614;
+  border-radius: 4px;
+}
+
+.closeButton:hover {
+  background-color: #e22d91;
+}
