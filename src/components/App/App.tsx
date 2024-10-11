@@ -63,7 +63,7 @@ const App: React.FC = () => {
   //   getImages();
   // }, [query, page]);
 
-  const handleSearch = (searchQuery: string | number) => {
+  const handleSearch = (searchQuery: string) => {
     setQuery(searchQuery);
     setPage(1);
     setImages([]);

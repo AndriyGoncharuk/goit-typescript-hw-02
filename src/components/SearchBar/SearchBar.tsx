@@ -3,7 +3,7 @@ import styles from "./SearchBar.module.css";
 import toast from "react-hot-toast";
 
 type Props = {
-  onSubmit: (value: string | number) => void;
+  onSubmit: (value: string) => void;
 };
 
 const SearchBar: React.FC<Props> = ({ onSubmit }) => {
