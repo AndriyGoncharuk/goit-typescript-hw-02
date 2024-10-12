@@ -45,26 +45,6 @@ const App: React.FC = () => {
     fetchData();
   }, [page, query]);
 
-  // useEffect(() => {
-  //   if (!query) return;
-
-  //   const getImages = async () => {
-  //     try {
-  //       setLoading(true);
-  //       setError(false);
-  //       const data = await fetchImages(query, page);
-  //       setImages((prevImages) => [...prevImages, ...data.results]);
-  //       setTotalPages(data.total_pages);
-  //     } catch (error) {
-  //       setError("Failed to load images. Please try again later.");
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   getImages();
-  // }, [query, page]);
-
   const handleSearch = (searchQuery: string) => {
     setQuery(searchQuery);
     setPage(1);
@@ -91,7 +71,9 @@ const App: React.FC = () => {
       {error && <ErrorMessage message={error.message} />}
       <ImageGallery images={images} openModal={openModal} />
       {loading && <Loader />}
-      {page >= totalPages && <p>END OF COLLECTION!!!!</p>}
+      {page >= totalPages && (
+        <p className={styles.endText}>END OF COLLECTION!!!!</p>
+      )}
       {images.length > 0 && !loading && page < totalPages && (
         <LoadMoreBtn onClick={handleLoadMore} />
       )}

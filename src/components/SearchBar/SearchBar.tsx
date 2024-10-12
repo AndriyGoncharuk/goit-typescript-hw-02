@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 type Props = {
   onSubmit: (value: string) => void;
@@ -17,6 +17,8 @@ const SearchBar: React.FC<Props> = ({ onSubmit }) => {
     e.preventDefault();
     if (value.trim() === "") {
       toast.error("Please enter a search term");
+
+      console.log(value);
       return;
     }
     onSubmit(value);
@@ -37,6 +39,7 @@ const SearchBar: React.FC<Props> = ({ onSubmit }) => {
           Search
         </button>
       </form>
+      <Toaster />
     </header>
   );
 };

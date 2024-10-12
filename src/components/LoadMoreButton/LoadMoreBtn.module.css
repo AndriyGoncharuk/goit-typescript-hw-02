@@ -1,8 +1,13 @@
 .button {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   background-color: #3a8d11;
   height: 30px;
-  width: 100px;
+  width: 120px;
+  margin-bottom: 20px;
 }
 
 .button:hover {

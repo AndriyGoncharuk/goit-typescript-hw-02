@@ -3,7 +3,7 @@ import styles from "./Loader.module.css";
 
 const Loader: React.FC = () => (
   <div className={styles.loader}>
-    <ThreeDots color="#00BFFF" height={80} width={80} />
+    <ThreeDots color="#ff0026" height={80} width={80} />
   </div>
 );
 
